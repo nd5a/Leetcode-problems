@@ -37,3 +37,47 @@ class Solution:
         d2 = get_diameter(edges2)
 
         return max(d1 // 2 + d2 // 2 + 1, d1 - 1, d2 - 1)
+
+# import matplotlib.pyplot as plt
+# import matplotlib.dates as mdates
+# from datetime import datetime, timedelta
+
+# # Define project phases and their durations
+# phases = [
+#     ("Maintenance", "2024-01-01", "2024-01-15"),
+#     ("Deployment", "2024-03-11", "2024-03-20"),
+#     ("Testing", "2024-03-01", "2024-03-10"),
+#     ("Coding", "2024-02-01", "2024-02-28"),
+#     ("Design", "2024-01-16", "2024-01-31"),
+#     ("Requirements Gathering","2024-03-21", "2024-03-31"),
+# ]
+
+# # Convert dates to datetime objects
+# phases = [(phase[0], datetime.strptime(phase[1], "%Y-%m-%d"), datetime.strptime(phase[2], "%Y-%m-%d")) for phase in phases]
+
+# # Calculate durations in days for plotting
+# start_dates = [phase[1] for phase in phases]
+# durations = [(phase[2] - phase[1]).days for phase in phases]
+# labels = [phase[0] for phase in phases]
+
+# # Create the timeline chart
+# fig, ax = plt.subplots(figsize=(10, 6))
+
+# # Plot each phase as a horizontal bar
+# ax.barh(labels, durations, left=[(start - start_dates[0]).days for start in start_dates], color='skyblue', edgecolor='black')
+
+# # Format the x-axis with date labels
+# start_date = start_dates[0]
+# end_date = phases[-1][2]
+# ax.set_xlim([(start_date - timedelta(days=2)), (end_date + timedelta(days=2))])
+# ax.xaxis.set_major_locator(mdates.WeekdayLocator(interval=1))
+# ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %d"))
+# plt.xticks(rotation=45)
+
+# # Add labels and grid
+# ax.set_xlabel("Timeline")
+# ax.set_title("Project Timeline for Blog Website")
+# ax.grid(axis="x", linestyle="--", alpha=0.7)
+
+# plt.tight_layout()
+# plt.show()
