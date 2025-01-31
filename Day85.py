@@ -4,7 +4,7 @@ from typing import List
 import collections
 
 class Solution:
-    def largestIsland(self, grid: List[List[int]]) -> int:
+    def largestIsland(self, grid):
         rows, cols = len(grid), len(grid[0])
         colors = [[-1] * cols for _ in range(rows)]  # Track island colors
         colorCount = collections.Counter()  # Store area of each island
