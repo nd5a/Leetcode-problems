@@ -1,7 +1,11 @@
 # Closest Prime Numbers in Range
 
-M = 10**6  
+from typing import List
+import bisect
 
+M = 10**6  # Set M to 10^6 as per the problem constraints
+
+# Precompute prime numbers using the Sieve of Eratosthenes
 prime = [True] * (M + 1)
 prime[0] = prime[1] = False
 p = []
@@ -23,6 +27,7 @@ class Solution:
         # Find the index of the first prime >= left
         index = bisect.bisect_left(p, left)
 
+        # If index is out of bounds or the first prime is greater than right, return [-1, -1]
         if index >= len(p) or p[index] > right:
             return [-1, -1]
 
