@@ -1,7 +1,7 @@
 # Maximum Candies Allocated to K Children
 
 class Solution:
-    def maximumCandies(self, candies: List[int], k: int) -> int:
+    def maximumCandies(self, candies, k):
         if sum(candies) < k:
             return 0 
         
