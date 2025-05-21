@@ -2,9 +2,6 @@
 
 class Solution:
     def setZeroes(self, matrix):
-        """
-        Do not return anything, modify matrix in-place instead.
-        """
         R = len(matrix)
         C = len(matrix[0])
          
