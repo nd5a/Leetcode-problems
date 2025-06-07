@@ -1,6 +1,7 @@
 # Lexicographically Smallest Equivalent String
 
 import collections
+import string
 class Solution:
     def smallestEquivalentString(self, s1: str, s2: str, baseStr: str) -> str:
         adj_list = collections.defaultdict(list)
