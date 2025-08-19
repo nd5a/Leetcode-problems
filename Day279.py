@@ -1,4 +1,4 @@
-# Numbers of Zero-Filled Subarrays
+# Numbers of Zero-Filled SubarrayS
 
 class Solution:
     def zeroFilledSubarray(self, nums):
