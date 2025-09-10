@@ -16,7 +16,7 @@ class Solution:
 
         # If everyone already can communicate
         if not mustLearnSet:
-            return 0
+            return 0 
 
         best = float("inf")
 
