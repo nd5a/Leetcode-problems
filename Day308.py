@@ -2,7 +2,6 @@
 
 from collections import defaultdict
 from sortedcontainers import SortedSet
-
 class FoodRatings:
 
     def __init__(self, foods, cuisines, ratings):
