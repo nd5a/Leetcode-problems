@@ -9,7 +9,6 @@ class Solution:
             while len(v) < m:
                 v.append(0)
             return v
-
         v1, v2 = conv(version1), conv(version2)
         m = max(len(v1), len(v2))
         v1, v2 = p(v1, m), p(v2, m)
